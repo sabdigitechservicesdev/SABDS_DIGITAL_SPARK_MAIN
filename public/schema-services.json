@@ -1,0 +1,106 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://sabdigitechservices.com/#digitalmarketing",
+      "name": "Best Digital Marketing Company in Kolkata",
+      "description": "SAB DigiTech Services is the leading digital marketing company in Kolkata and West Bengal, offering comprehensive digital marketing solutions including SEO, social media marketing, website development, and Google My Business optimization.",
+      "url": "https://sabdigitechservices.com",
+      "telephone": "+91-6295008944",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kolkata",
+        "addressRegion": "West Bengal",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "22.5726",
+        "longitude": "88.3639"
+      },
+      "areaServed": [
+        "Kolkata",
+        "West Bengal",
+        "Howrah",
+        "Salt Lake",
+        "New Town",
+        "Ballygunge",
+        "Park Street",
+        "Rajarhat"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Marketing Services in Kolkata",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "serviceType": "SEO Services Kolkata",
+              "description": "Best SEO services in Kolkata for top Google rankings"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "serviceType": "Website Development Kolkata",
+              "description": "Professional website development services in Kolkata"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "serviceType": "Google My Business Optimization",
+              "description": "Complete GMB setup and local SEO in Kolkata"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://sabdigitechservices.com/#localbusiness",
+      "name": "SAB DigiTech Services",
+      "image": "https://sabdigitechservices.com/logo.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kolkata",
+        "addressRegion": "West Bengal",
+        "postalCode": "700001",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-6295008944",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://sabdigitechservices.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://sabdigitechservices.com/",
+            "name": "Home"
+          }
+        }
+      ]
+    }
+  ]
+}

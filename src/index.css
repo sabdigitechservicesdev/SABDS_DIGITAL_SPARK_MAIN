@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  :root {
+    /* Font Family Variables */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+    --font-montserrat: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* SAB DigiTech Brand Colors - Deep Blue & Cyan Theme */
+    --background: 0 0% 100%;
+    --foreground: 210 100% 12%;
+    
+    /* Primary - Deep Navy Blue from logo */
+    --primary: 210 100% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 35%;
+    
+    /* Secondary - Bright Blue from logo */
+    --secondary: 210 100% 45%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Accent - Cyan/Turquoise from logo */
+    --accent: 190 100% 50%;
+    --accent-foreground: 210 100% 12%;
+    --accent-glow: 190 100% 65%;
+    
+    /* Magenta accent for CTAs */
+    --cta: 330 100% 50%;
+    --cta-foreground: 0 0% 100%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 210 100% 12%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 12%;
+    
+    --muted: 210 30% 96%;
+    --muted-foreground: 210 20% 45%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 30% 90%;
+    --input: 210 30% 90%;
+    --ring: 190 100% 50%;
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 25%), hsl(210 100% 35%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 100% 45%), hsl(190 100% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(190 100% 50%), hsl(190 100% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 15%) 0%, hsl(210 100% 25%) 50%, hsl(190 100% 40%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(330 100% 50%), hsl(280 100% 50%));
+    
+    /* Shadows with color */
+    --shadow-primary: 0 10px 40px -10px hsl(210 100% 25% / 0.4);
+    --shadow-accent: 0 10px 40px -10px hsl(190 100% 50% / 0.4);
+    --shadow-glow: 0 0 50px hsl(190 100% 50% / 0.3);
+    --shadow-3d: 0 20px 60px -15px hsl(210 100% 15% / 0.5);
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 210 100% 8%;
+    --foreground: 0 0% 98%;
+    
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 55%;
+    
+    --secondary: 210 100% 35%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 190 100% 50%;
+    --accent-foreground: 210 100% 8%;
+    --accent-glow: 190 100% 65%;
+    
+    --cta: 330 100% 55%;
+    --cta-foreground: 0 0% 100%;
+    
+    --card: 210 100% 12%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 210 100% 12%;
+    --popover-foreground: 0 0% 98%;
+    
+    --muted: 210 50% 20%;
+    --muted-foreground: 210 20% 65%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 50% 20%;
+    --input: 210 50% 20%;
+    --ring: 190 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans); 
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+
+  code, pre, kbd, samp {
+    font-family: var(--font-mono);
+    font-weight: 400;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Font Utility Classes */
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .font-montserrat {
+    font-family: var(--font-montserrat);
+  }
+  
+  /* 3D Transform utilities */
+  .transform-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-2;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-secondary);
+  }
+  
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-lg border border-white/10;
+  }
+  
+  /* Animated gradient background */
+  .animated-gradient {
+    background: var(--gradient-hero);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Pulse glow animation */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px hsl(190 100% 50% / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(190 100% 50% / 0.6); }
+  }
+  
+  /* Fade in animations */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Scale in animation */
+  .scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
