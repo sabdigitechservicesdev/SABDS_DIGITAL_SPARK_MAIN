@@ -781,15 +781,34 @@
 
 // export default Hero;
 
-import { useEffect, useRef } from "react";
+
+
+import { useEffect, useRef, useState } from "react";
 import heroVideo from "@/assets/hero-video.mp4";
+import heroVideoSmall from "@/assets/hero-small.mp4";
 import heroVideoPoster from "@/assets/hero-video.mp4";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Video seamless loop handler for exactly 6 seconds
+  // Detect mobile screen
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    window.addEventListener('orientationchange', checkMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener('orientationchange', checkMobile);
+    };
+  }, []);
+
+  // Video seamless loop handler
   const handleTimeUpdate = () => {
     if (videoRef.current) {
       if (videoRef.current.currentTime >= 5.99) {
@@ -799,32 +818,21 @@ const Hero = () => {
     }
   };
 
-  // Ensure video plays and loops continuously
+  // Ensure video plays continuously
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
     const playVideo = () => {
       video.play().catch(e => {
-        // If autoplay is blocked, retry with user interaction
-        console.log("Autoplay prevented, waiting for interaction");
-        const handleUserInteraction = () => {
-          video.play().catch(console.error);
-          document.removeEventListener('click', handleUserInteraction);
-          document.removeEventListener('touchstart', handleUserInteraction);
-        };
-        document.addEventListener('click', handleUserInteraction);
-        document.addEventListener('touchstart', handleUserInteraction);
+        console.log("Autoplay prevented");
       });
     };
 
-    // Start playing
     playVideo();
 
-    // Ensure it keeps playing
     const checkPlayback = setInterval(() => {
       if (video.paused) {
-        console.log("Video paused, restarting...");
         playVideo();
       }
     }, 1000);
@@ -832,7 +840,7 @@ const Hero = () => {
     return () => clearInterval(checkPlayback);
   }, []);
 
-  // Handle video end - seamless restart
+  // Handle video end
   const handleVideoEnd = () => {
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
@@ -843,7 +851,6 @@ const Hero = () => {
   // Handle video errors
   const handleVideoError = (e: any) => {
     console.error("Video error:", e);
-    // Try to reload the video source
     setTimeout(() => {
       if (videoRef.current) {
         videoRef.current.load();
@@ -853,100 +860,97 @@ const Hero = () => {
   };
 
   return (
-    <div 
-      ref={containerRef}
-      className="relative w-full h-screen overflow-hidden"
-    >
-      {/* Pure Video Background */}
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        playsInline
-        loop
-        preload="auto"
-        poster={heroVideoPoster}
-        onTimeUpdate={handleTimeUpdate}
-        onEnded={handleVideoEnd}
-        onError={handleVideoError}
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{
-          filter: 'brightness(1.1) contrast(1.05)',
-        }}
-      >
-        <source src={heroVideo} type="video/mp4" />
-        Your browser does not support HTML5 video.
-      </video>
-
-      {/* Minimal overlay to ensure video visibility */}
-      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-black/10"></div> */}
-
-      {/* Video edge enhancement */}
-      {/* <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0"
+    <div className="relative w-full h-screen overflow-hidden bg-white">
+      {/* Video Container */}
+      <div className="absolute inset-0 bg-white">
+        {/* Video Element */}
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          playsInline
+          loop
+          preload="auto"
+          poster={heroVideoPoster}
+          onTimeUpdate={handleTimeUpdate}
+          onEnded={handleVideoEnd}
+          onError={handleVideoError}
+          className="absolute inset-0 w-full h-full"
           style={{
-            boxShadow: `
-              inset 0 0 200px rgba(0, 0, 0, 0.5),
-              inset 0 0 100px rgba(0, 0, 0, 0.3)
-            `,
+            filter: 'brightness(1.1) contrast(1.05)',
+            objectFit: isMobile ? 'contain' : 'cover',
+            objectPosition: 'center'
           }}
-        />
-      </div> */}
-
-      {/* Video status indicator (hidden in production) */}
-      <div className="absolute bottom-4 right-4 text-white/30 text-xs font-mono pointer-events-none">
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-          <span>Video Playing</span>
-        </div>
+        >
+          <source src={isMobile ? heroVideoSmall : heroVideo} type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
       </div>
 
-      {/* Click to play fallback for mobile */}
+      {/* Click to play fallback */}
       <div 
         className="absolute inset-0 cursor-pointer"
         onClick={() => {
-          if (videoRef.current) {
-            if (videoRef.current.paused) {
-              videoRef.current.play().catch(console.error);
-            }
+          if (videoRef.current?.paused) {
+            videoRef.current.play().catch(console.error);
           }
         }}
         onTouchStart={() => {
-          if (videoRef.current) {
-            if (videoRef.current.paused) {
-              videoRef.current.play().catch(console.error);
-            }
+          if (videoRef.current?.paused) {
+            videoRef.current.play().catch(console.error);
           }
         }}
       />
 
       <style>{`
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.5; }
-        }
-        
-        .animate-pulse {
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        /* Mobile responsive */
+        @media (max-width: 790px) {
+          /* Square video container - centered with white background */
+          .h-screen {
+          
+            height: 120vh;
+            height: 120dvh;
+          }
+          
+          video {
+            background-color: white;
+          }
+          
+          /* Fix for mobile square video */
+          @media (orientation: portrait) {
+            video {
+              width: 100%;
+              height: auto;
+            }
+          }
+          
+          @media (orientation: landscape) {
+            video {
+              width: auto;
+              height: 100%;
+            }
+          }
         }
 
-        /* Video optimization */
-        video {
-          min-width: 100vw;
-          min-height: 100vh;
-          object-fit: cover;
-          object-position: center;
-          will-change: transform;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          transform: translateZ(0);
+        /* Desktop - Fix zoom issue */
+        @media (min-width: 769px) {
+          video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            /* Prevent excessive zoom */
+            transform: none !important;
+            min-width: 100%;
+            min-height: 100%;
+          }
         }
 
-        /* Prevent any interference */
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
+        /* iOS specific */
+        @supports (-webkit-touch-callout: none) {
+          .h-screen {
+            height: -webkit-fill-available;
+          }
         }
 
         /* Full screen container */
@@ -955,16 +959,9 @@ const Hero = () => {
           height: 100dvh;
         }
 
-        /* Performance optimization */
-        .pointer-events-none {
-          pointer-events: none;
-        }
-
-        /* Ensure video plays in background */
-        @media (prefers-reduced-motion: reduce) {
-          video {
-            animation: none;
-          }
+        /* Ensure white background everywhere */
+        body {
+          background-color: white;
         }
       `}</style>
     </div>

@@ -32,7 +32,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-24 overflow-hidden font-montserrat">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background"></div>
       

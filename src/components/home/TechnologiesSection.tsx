@@ -106,7 +106,7 @@ const TechnologiesSection = () => {
   return (
     <section 
       ref={ref}
-      className="relative py-20 md:py-28 overflow-hidden bg-white"
+      className="relative py-20 md:py-28 overflow-hidden bg-white font-montserrat"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-transparent" />
