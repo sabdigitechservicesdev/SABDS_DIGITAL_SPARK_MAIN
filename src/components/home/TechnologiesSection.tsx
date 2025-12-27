@@ -5,7 +5,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import ReactLogo from "@/assets/tech-logos/react.svg";
 import NextjsLogo from "@/assets/tech-logos/Nextjs.svg";
 import NodejsLogo from "@/assets/tech-logos/Nodejs.svg";
-import WordPressLogo from "@/assets/tech-logos/wordpress.svg";
+import WordPressLogo from "@/assets/tech-logos/WordPress.svg";
 import MySqlLogo from "@/assets/tech-logos/mysql.svg";
 import AndroidLogo from "@/assets/tech-logos/android.svg";
 import GoogleAdsLogo from "@/assets/tech-logos/google-ads.svg";
