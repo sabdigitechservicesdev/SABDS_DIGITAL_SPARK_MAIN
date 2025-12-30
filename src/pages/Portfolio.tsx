@@ -13,6 +13,7 @@ const Portfolio = () => {
       description: "Complete e-commerce solution with payment integration and inventory management",
       tags: ["React", "Node.js", "Payment Gateway", "SEO"],
       metrics: ["300% Traffic Increase", "250% Sales Growth", "4.8★ Rating"],
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop&crop=center"
     },
     {
       title: "Real Estate Platform",
@@ -20,6 +21,7 @@ const Portfolio = () => {
       description: "Comprehensive digital marketing campaign including SEO, social media, and PPC",
       tags: ["SEO", "Google Ads", "Social Media", "Content"],
       metrics: ["500+ Leads/Month", "Top 3 Rankings", "200% ROI"],
+      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=400&fit=crop&crop=center"
     },
     {
       title: "Healthcare Clinic Website",
@@ -27,6 +29,7 @@ const Portfolio = () => {
       description: "Professional healthcare website with appointment booking and patient portal",
       tags: ["WordPress", "Booking System", "Mobile App", "SEO"],
       metrics: ["5000+ Monthly Visitors", "400+ Appointments", "4.9★ Rating"],
+      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=400&fit=crop&crop=center"
     },
     {
       title: "Restaurant Chain Marketing",
@@ -34,6 +37,7 @@ const Portfolio = () => {
       description: "Social media strategy and management for a multi-location restaurant chain",
       tags: ["Instagram", "Facebook", "Content Creation", "Influencer"],
       metrics: ["50K+ Followers", "500% Engagement", "40% More Footfall"],
+      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=400&fit=crop&crop=center"
     },
     {
       title: "Manufacturing Company SEO",
@@ -41,6 +45,7 @@ const Portfolio = () => {
       description: "Complete SEO overhaul resulting in first-page rankings for competitive keywords",
       tags: ["Technical SEO", "Link Building", "Content", "Local SEO"],
       metrics: ["First Page Rankings", "800% Organic Traffic", "300+ Keywords"],
+      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=400&fit=crop&crop=center"
     },
     {
       title: "Educational Institute Portal",
@@ -48,6 +53,7 @@ const Portfolio = () => {
       description: "Learning management system with student portal and online course delivery",
       tags: ["LMS", "Custom Development", "Mobile Responsive", "SEO"],
       metrics: ["10K+ Students", "100+ Courses", "99% Uptime"],
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=400&fit=crop&crop=center"
     },
     {
       title: "Wellness Center Branding",
@@ -55,6 +61,7 @@ const Portfolio = () => {
       description: "Complete brand identity and digital presence for a wellness center",
       tags: ["Branding", "Social Media", "Google Ads", "Content"],
       metrics: ["400% Brand Awareness", "250 New Clients", "4.9★ Reviews"],
+      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=400&fit=crop&crop=center"
     },
     {
       title: "Tech Startup Website",
@@ -62,6 +69,7 @@ const Portfolio = () => {
       description: "Modern, scalable web application for a SaaS tech startup",
       tags: ["React", "API Integration", "Cloud", "Analytics"],
       metrics: ["100K+ Users", "50% Conversion", "$2M Funding"],
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop&crop=center"
     },
     {
       title: "Boutique Hotel Marketing",
@@ -69,6 +77,7 @@ const Portfolio = () => {
       description: "Local SEO and Google Business optimization for boutique hotels",
       tags: ["Google My Business", "Local SEO", "Reviews", "Photos"],
       metrics: ["Top 3 Local Rankings", "300+ Reviews", "150% Bookings"],
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=400&fit=crop&crop=center"
     },
   ];
 
@@ -133,11 +142,14 @@ const Portfolio = () => {
                 key={index}
                 className="group overflow-hidden hover-lift border-2 hover:border-accent transition-all"
               >
-                {/* Project Image Placeholder */}
+                {/* Project Image with category-specific image */}
                 <div className="h-48 bg-gradient-primary relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-white/20 text-6xl font-bold">{index + 1}</div>
-                  </div>
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all flex items-center justify-center">
                     <ExternalLink className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
