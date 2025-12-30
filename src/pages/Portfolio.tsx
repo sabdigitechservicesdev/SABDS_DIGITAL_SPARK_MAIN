@@ -7,78 +7,78 @@ import techBackground from "@/assets/backgrounds/tech-network.jpg";
 
 const Portfolio = () => {
   const projects = [
-    {
-      title: "E-Commerce Fashion Store",
-      category: "Website Development",
-      description: "Complete e-commerce solution with payment integration and inventory management",
-      tags: ["React", "Node.js", "Payment Gateway", "SEO"],
-      metrics: ["300% Traffic Increase", "250% Sales Growth", "4.8★ Rating"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop&crop=center"
-    },
-    {
-      title: "Real Estate Platform",
-      category: "Digital Marketing",
-      description: "Comprehensive digital marketing campaign including SEO, social media, and PPC",
-      tags: ["SEO", "Google Ads", "Social Media", "Content"],
-      metrics: ["500+ Leads/Month", "Top 3 Rankings", "200% ROI"],
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=400&fit=crop&crop=center"
-    },
-    {
-      title: "Healthcare Clinic Website",
-      category: "Website Development",
-      description: "Professional healthcare website with appointment booking and patient portal",
-      tags: ["WordPress", "Booking System", "Mobile App", "SEO"],
-      metrics: ["5000+ Monthly Visitors", "400+ Appointments", "4.9★ Rating"],
-      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=400&fit=crop&crop=center"
-    },
-    {
-      title: "Restaurant Chain Marketing",
-      category: "Social Media Marketing",
-      description: "Social media strategy and management for a multi-location restaurant chain",
-      tags: ["Instagram", "Facebook", "Content Creation", "Influencer"],
-      metrics: ["50K+ Followers", "500% Engagement", "40% More Footfall"],
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=400&fit=crop&crop=center"
-    },
-    {
-      title: "Manufacturing Company SEO",
-      category: "SEO Services",
-      description: "Complete SEO overhaul resulting in first-page rankings for competitive keywords",
-      tags: ["Technical SEO", "Link Building", "Content", "Local SEO"],
-      metrics: ["First Page Rankings", "800% Organic Traffic", "300+ Keywords"],
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=400&fit=crop&crop=center"
-    },
-    {
-      title: "Educational Institute Portal",
-      category: "Website Development",
-      description: "Learning management system with student portal and online course delivery",
-      tags: ["LMS", "Custom Development", "Mobile Responsive", "SEO"],
-      metrics: ["10K+ Students", "100+ Courses", "99% Uptime"],
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=400&fit=crop&crop=center"
-    },
-    {
-      title: "Wellness Center Branding",
-      category: "Digital Marketing",
-      description: "Complete brand identity and digital presence for a wellness center",
-      tags: ["Branding", "Social Media", "Google Ads", "Content"],
-      metrics: ["400% Brand Awareness", "250 New Clients", "4.9★ Reviews"],
-      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=400&fit=crop&crop=center"
-    },
-    {
-      title: "Tech Startup Website",
-      category: "Website Development",
-      description: "Modern, scalable web application for a SaaS tech startup",
-      tags: ["React", "API Integration", "Cloud", "Analytics"],
-      metrics: ["100K+ Users", "50% Conversion", "$2M Funding"],
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop&crop=center"
-    },
-    {
-      title: "Boutique Hotel Marketing",
-      category: "Google Business Profile",
-      description: "Local SEO and Google Business optimization for boutique hotels",
-      tags: ["Google My Business", "Local SEO", "Reviews", "Photos"],
-      metrics: ["Top 3 Local Rankings", "300+ Reviews", "150% Bookings"],
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=400&fit=crop&crop=center"
-    },
+   {
+  title: "E-Commerce Fashion Store",
+  category: "Website Development",
+  description: "Complete e-commerce solution with payment integration and inventory management",
+  tags: ["React", "Node.js", "Payment Gateway", "SEO"],
+  metrics: ["300% Traffic Increase", "250% Sales Growth", "4.8★ Rating"],
+  image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop&crop=center&auto=format"
+},
+{
+  title: "Real Estate Platform",
+  category: "Digital Marketing",
+  description: "Comprehensive digital marketing campaign including SEO, social media, and PPC",
+  tags: ["SEO", "Google Ads", "Social Media", "Content"],
+  metrics: ["500+ Leads/Month", "Top 3 Rankings", "200% ROI"],
+  image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=400&fit=crop&crop=center&auto=format"
+},
+{
+  title: "Healthcare Clinic Website",
+  category: "Website Development",
+  description: "Professional healthcare website with appointment booking and patient portal",
+  tags: ["WordPress", "Booking System", "Mobile App", "SEO"],
+  metrics: ["5000+ Monthly Visitors", "400+ Appointments", "4.9★ Rating"],
+  image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=400&fit=crop&crop=center&auto=format"
+},
+{
+  title: "Restaurant Chain Marketing",
+  category: "Social Media Marketing",
+  description: "Social media strategy and management for a multi-location restaurant chain",
+  tags: ["Instagram", "Facebook", "Content Creation", "Influencer"],
+  metrics: ["50K+ Followers", "500% Engagement", "40% More Footfall"],
+  image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=400&fit=crop&crop=center&auto=format"
+},
+{
+  title: "Manufacturing Company SEO",
+  category: "SEO Services",
+  description: "Complete SEO overhaul resulting in first-page rankings for competitive keywords",
+  tags: ["Technical SEO", "Link Building", "Content", "Local SEO"],
+  metrics: ["First Page Rankings", "800% Organic Traffic", "300+ Keywords"],
+  image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=400&fit=crop&crop=center&auto=format"
+},
+{
+  title: "Educational Institute Portal",
+  category: "Website Development",
+  description: "Learning management system with student portal and online course delivery",
+  tags: ["LMS", "Custom Development", "Mobile Responsive", "SEO"],
+  metrics: ["10K+ Students", "100+ Courses", "99% Uptime"],
+  image: "https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=400&fit=crop&crop=center&auto=format"
+},
+{
+  title: "Wellness Center Branding",
+  category: "Digital Marketing",
+  description: "Complete brand identity and digital presence for a wellness center",
+  tags: ["Branding", "Social Media", "Google Ads", "Content"],
+  metrics: ["400% Brand Awareness", "250 New Clients", "4.9★ Reviews"],
+  image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=400&fit=crop&crop=center&auto=format"
+},
+{
+  title: "Tech Startup Website",
+  category: "Website Development",
+  description: "Modern, scalable web application for a SaaS tech startup",
+  tags: ["React", "API Integration", "Cloud", "Analytics"],
+  metrics: ["100K+ Users", "50% Conversion", "$2M Funding"],
+  image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop&crop=center&auto=format"
+},
+{
+  title: "Boutique Hotel Marketing",
+  category: "Google Business Profile",
+  description: "Local SEO and Google Business optimization for boutique hotels",
+  tags: ["Google My Business", "Local SEO", "Reviews", "Photos"],
+  metrics: ["Top 3 Local Rankings", "300+ Reviews", "150% Bookings"],
+  image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=400&fit=crop&crop=center&auto=format"
+},
   ];
 
   const categories = ["All", "Website Development", "Digital Marketing", "SEO Services", "Social Media Marketing", "Google Business Profile"];

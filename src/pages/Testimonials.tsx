@@ -27,7 +27,7 @@ const Testimonials = () => {
       location: "South Kolkata",
       rating: 5,
       text: "Amazing work on our website and social media marketing. Our sales have doubled since we started working with them. The team is creative, responsive, and truly understands our brand.",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+      avatar: "https://media.istockphoto.com/id/1387060932/photo/portrait-of-woman-on-white-background-stock-photo.jpg?s=2048x2048&w=is&k=20&c=QL1EvAGaerRPdQ6DJR17dtl-QKeIn4slNVyi6sOoV0A=",
     },
     {
       name: "Amit Patel",
@@ -72,16 +72,16 @@ const Testimonials = () => {
       location: "Howrah",
       rating: 5,
       text: "The digital marketing strategies implemented by SAB DigiTech have been game-changing for our business. Revenue has increased by 250% and we continue to grow.",
-      avatar: "https://images.unsplash.com/photo-1507591064344-4c6ce005-128?w=400&h=400&fit=crop&crop=face",
+      avatar: "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      name: "Kavita Joshi",
+      name: "Raj Joshi",
       company: "MediCare Healthcare Clinic",
       role: "Manager",
       location: "Bhowanipore",
       rating: 5,
       text: "Their ratings and reviews management service helped us build a strong online reputation. We now have a 4.9-star rating on Google with hundreds of positive reviews.",
-      avatar: "https://images.unsplash.com/photo-1551836026-d5c2c5af91f9?w=400&h=400&fit=crop&crop=face",
+      avatar: "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?q=80&w=1085&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Rohit Verma",
