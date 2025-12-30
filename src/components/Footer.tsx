@@ -101,7 +101,7 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                 <span className="text-white/80 text-sm">
-                  Your Digital Success Partner
+                  Arupara Road, G.I.P. Colony, Jagacha, Howrah, 711112, West Bengal
                 </span>
               </li>
             </ul>

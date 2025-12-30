@@ -96,7 +96,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Location</h3>
               <p className="text-muted-foreground">
-                Your Digital Success Partner
+                Arupara Road, G.I.P. Colony, Jagacha, Howrah, 711112, West Bengal
               </p>
             </Card>
           </div>
