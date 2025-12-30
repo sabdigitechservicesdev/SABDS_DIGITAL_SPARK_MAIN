@@ -44,7 +44,7 @@ const About = () => {
               About <span className="gradient-text bg-gradient-accent">SAB DigiTech Services</span>
             </h1>
             <h2 className="text-xl text-white/90 leading-relaxed">
-              Best Digital Marketing Company in Kolkata & West Bengal - Your trusted digital transformation partner driving business growth
+              Best Digital Marketing Company in Howrah, Kolkata & West Bengal - Your trusted digital transformation partner driving business growth
             </h2>
           </div>
         </div>
@@ -60,10 +60,10 @@ const About = () => {
                 <span className="text-accent font-medium">Our Mission</span>
               </div>
               <h2 className="text-4xl font-bold">
-                Leading Digital Marketing Company in Kolkata & West Bengal
+                Leading Digital Marketing Company in Howrah, Kolkata & West Bengal
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                As the best digital marketing company in Kolkata, we provide quality website development, SEO services, graphic design, and social media marketing solutions for businesses across West Bengal. Our mission is to empower companies with innovative digital strategies and expert execution.
+                Based in Howrah, we are the best digital marketing company serving Kolkata and West Bengal. We provide quality website development, SEO services, graphic design, and social media marketing solutions. Our mission is to empower companies with innovative digital strategies and expert execution.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 At SAB DigiTech Services, the top website design company in Kolkata, we partner with you to generate more business through strategic web solutions, SEO optimization, and comprehensive digital marketing services. We are your one-stop digital marketing agency for complete online success.

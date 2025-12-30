@@ -56,7 +56,7 @@ const Contact = () => {
               Get in <span className="gradient-text bg-gradient-accent">Touch</span>
             </h1>
             <h2 className="text-xl text-white/90 leading-relaxed">
-              Contact the best digital marketing company in Kolkata - Ready to transform your digital presence
+              Contact the best digital marketing company in Howrah & Kolkata - Ready to transform your digital presence
             </h2>
           </div>
         </div>
@@ -96,7 +96,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Location</h3>
               <p className="text-muted-foreground">
-                Your Digital Success Partner
+                Arupara Road, G.I.P. Colony,<br />Jagacha, Howrah, 711112<br />West Bengal, India
               </p>
             </Card>
           </div>
