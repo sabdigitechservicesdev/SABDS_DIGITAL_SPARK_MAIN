@@ -85,10 +85,10 @@ const Navigation = () => {
   ];
 
   const linkClass = (path: string) =>
-    `font-medium transition-colors ${
+    `font-medium transition-colors duration-300 ${
       location.pathname === path
-        ? "text-blue-600"
-        : "text-slate-700 hover:text-blue-600"
+        ? "text-orange-500 font-semibold"
+        : "text-white hover:text-orange-400"
     }`;
 
   // Close mobile menu when clicking outside
@@ -120,12 +120,12 @@ const Navigation = () => {
   const getBackgroundClass = () => {
     if (!isHomePage) {
       // On other pages, always show background
-      return "bg-blue-50 backdrop-blur-md shadow-lg rounded-full";
+      return "bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 backdrop-blur-md shadow-lg rounded-full";
     }
     
     // On home page, show background only when scrolled
     return isScrolled 
-      ? "bg-blue-50 backdrop-blur-md shadow-lg rounded-full" 
+      ? "bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 backdrop-blur-md shadow-lg rounded-full" 
       : "bg-transparent";
   };
 
@@ -333,9 +333,9 @@ const Navigation = () => {
                       }, 100);
                     }}
                   >
-                    <button className="flex items-center space-x-1 font-medium text-slate-700 hover:text-blue-600">
+                    <button className="flex items-center space-x-1 font-medium text-white hover:text-orange-400 transition-colors duration-300">
                       <span>Services</span>
-                      <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
                     </button>
 
                     <AnimatePresence>
@@ -402,7 +402,7 @@ const Navigation = () => {
 
                   <Button
                     asChild
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                    className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     <Link to="/contact">Get Started</Link>
                   </Button>

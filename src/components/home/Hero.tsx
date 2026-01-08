@@ -808,14 +808,10 @@ const Hero = () => {
     };
   }, []);
 
-  // Video seamless loop handler
+  // Video seamless loop handler - removed early loop trigger to let video play completely
   const handleTimeUpdate = () => {
-    if (videoRef.current) {
-      if (videoRef.current.currentTime >= 5.99) {
-        videoRef.current.currentTime = 0;
-        videoRef.current.play().catch(console.error);
-      }
-    }
+    // Video will loop naturally with the 'loop' attribute
+    // No manual intervention needed
   };
 
   // Ensure video plays continuously
@@ -875,7 +871,7 @@ const Hero = () => {
           onTimeUpdate={handleTimeUpdate}
           onEnded={handleVideoEnd}
           onError={handleVideoError}
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full transition-all duration-500 ease-smooth"
           style={{
             filter: 'brightness(1.1) contrast(1.05)',
             objectFit: isMobile ? 'contain' : 'cover',
