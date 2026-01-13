@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook,  Instagram, Linkedin, Mail, Phone, MapPin, X } from "lucide-react";
 import logo from "@/assets/logo.jpg";
+import { FaGoogle } from "react-icons/fa";
 
 const Footer = () => {
   const services = [
@@ -30,18 +31,22 @@ const Footer = () => {
               Your premier digital partner for innovative web solutions and strategic digital marketing.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href=" https://www.facebook.com/profile.php?id=61583917328891" className="hover:text-accent transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="https://x.com/SAB_Digitech" className="hover:text-accent transition-colors">
+                <X className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href=" https://www.instagram.com/sabds25?igsh=MXgzd21nZnA4dm92NA==" className="hover:text-accent transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+                              <a href="https://share.google/K4VfY86diUCMY45en" className="hover:text-accent transition-colors">
+                <FaGoogle  className="h-5 w-5" />
+              </a>
+              <a href="https://www.linkedin.com/company/sab-digitech-services/ " className="hover:text-accent transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
+
             </div>
           </div>
 
