@@ -142,11 +142,14 @@ const WhyChooseUs = () => {
             </span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-5">
+          {/* <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-5">
             Our Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Core Strengths</span>
+          </h2> */}
+                   <h2 className="text-4xl md:text-5xl font-extrabold">
+            Our Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Core Strengths</span>
           </h2>
           
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-extrabold">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto pt-5">
             Leading digital marketing agency in Kolkata with proven expertise in creating impactful digital solutions
           </p>
         </div>

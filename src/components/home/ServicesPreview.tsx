@@ -110,7 +110,7 @@ const ServicesPreview = () => {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-background font-montserrat ">
+    <section className="relative py-2 overflow-hidden bg-background font-montserrat ">
       {/* Minimal background effects */}
       <div className="absolute inset-0 bg-grid-white/5 bg-[size:40px_40px]" />
       

@@ -141,7 +141,7 @@ const WhyChooseUsSection: React.FC = () => {
             </span>
           </motion.div>
           
-          <motion.h2
+          {/* <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -152,14 +152,18 @@ const WhyChooseUsSection: React.FC = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
               Best Digital Marketing Agency
             </span>
-          </motion.h2>
+          </motion.h2> */}
+
+                   <h2 className="text-4xl md:text-5xl font-extrabold">
+            Why Choose The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Best Digital Marketing Agency</span>
+          </h2>
           
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            className="text-lg text-gray-600 max-w-3xl mx-auto pt-5"
           >
             Leading digital marketing agency in Kolkata & West Bengal with proven expertise in website development, SEO, and social media marketing
           </motion.p>
