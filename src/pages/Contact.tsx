@@ -197,10 +197,10 @@ const Contact = () => {
       title: "Email",
       content: (
         <a
-          href="mailto:sabdigitechservices@gmail.com"
+          href="mailto:info@sabdigitech.in"
           className="text-white/90 hover:text-white transition-colors duration-300 break-all font-medium group"
         >
-          sabdigitechservices@gmail.com
+          info@sabdigitech.in
           <ChevronRight className="inline-block ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 translate-x-[-5px] group-hover:translate-x-0 transition-all duration-300" />
         </a>
       ),
@@ -652,7 +652,7 @@ const Contact = () => {
 
         {/* Email Button */}
         <motion.a
-          href="mailto:sabdigitechservices@gmail.com"
+          href="mailto:info@sabdigitech.in"
           className="group relative"
           initial={{ opacity: 0, scale: 0, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
